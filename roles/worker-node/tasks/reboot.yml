@@ -1,0 +1,6 @@
+- name: Reboot the server
+  reboot:
+    post_reboot_delay: 50
+  delegate_to: "{{ groups['kube-node'][0] }}"
+  changed_when: false
+
